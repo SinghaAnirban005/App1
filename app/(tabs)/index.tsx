@@ -1,23 +1,16 @@
 import { View, Text, Button, StyleSheet } from 'react-native';
+import React from 'react';
+import HelloWorld from '@singhaanirban/react-native-hello';
 
-export default function app1() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to App1 !</Text>
-      <Button title="Click Me" onPress={() => alert('Button clicked!')} />
+    <View>
+      <HelloWorld 
+        containerStyle={{ backgroundColor: 'blue' }}
+        textStyle={{ fontSize: 22, color: 'yellow' }}
+      />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'yellow',
-  },
-  text: {
-    fontSize: 20,
-    marginBottom: 20,
-  },
-});
+export default App;
